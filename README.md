@@ -13,7 +13,7 @@ Python 3.x
 Docker
 
 
-### Getting Started
+## Getting Started
 Follow the steps below to get started with this script:
 
 #### Clone the repository to your local machine:
