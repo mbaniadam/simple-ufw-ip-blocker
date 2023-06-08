@@ -1,4 +1,5 @@
 import psycopg2
+from datetime import timedelta, date
 
 db_name = "wgpeers"
 table_name = "users"
@@ -18,7 +19,8 @@ def addUpUser():
         print("                         Add wg peers")
         user = input("Enter User: ")
         ip_address = input("Enter ip_address: ")
-        expire_date = input("Format: yyyy/mm/dd\nEnter expiration date: ")
+        validDays = int(input("Valid days: "))
+        expire_date = date.today() + timedelta(days=validDays)
         """ insert a new user into the users table """
         sql = f"""INSERT INTO {table_name} (username,ip_address,expire_date) VALUES ('{user}','{ip_address}','{expire_date}')
                 ON CONFLICT (ip_address) DO UPDATE SET expire_date = EXCLUDED.expire_date;"""
