@@ -1,5 +1,4 @@
 import psycopg2
-import wg_expiration
 
 db_name = "wgpeers"
 table_name = "users"
@@ -32,7 +31,6 @@ def addUpUser():
                 finish = 0
             else:
                 cnx.commit()
-                wg_expiration.main()
                 continue
             
         except (Exception, psycopg2.DatabaseError) as error:
