@@ -2,7 +2,7 @@ import psycopg2
 
 db_name = "wgpeers"
 table_name = "users"
-db_host = "192.168.61.128"
+db_host = "127.0.0.1"
 db_port =  5432
 cnx = psycopg2.connect(database=db_name,
                         host=db_host,
