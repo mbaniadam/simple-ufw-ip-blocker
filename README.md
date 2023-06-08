@@ -4,7 +4,9 @@
 
 ![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/f561c711-3ce4-44a3-be1f-364a91a0b98e)
 ****
+![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/6bda7a28-6f4f-49a6-8563-3d2e9932b090)
 
+![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/340c23f9-704a-40c5-b119-bfc6b92413c2)
 
 #### This repository contains a simple Python script that integrates with a Postgres database and firewall rules based on IP addresses and expiration dates.
 
