@@ -18,4 +18,6 @@ cursor = cnx.cursor()
 cursor.execute(f"select username, ip_address, AGE(created_date,expire_date) from users ")
 selected = cursor.fetchall()
 
-print(selected)
+for i in selected:
+    print(i)
+

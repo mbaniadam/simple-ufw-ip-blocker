@@ -17,7 +17,7 @@ while finish == 0:
     print("                         Add wg peers")
     user = input("Enter User: ")
     ip_address = input("Enter ip_address: ")
-    expire_date = input("Enter expiration date: ")
+    expire_date = input("Format: yyyy/mm/dd\nEnter expiration date: ")
     """ insert a new user into the users table """
     sql = f"""INSERT INTO {table_name} (username,ip_address,expire_date) VALUES ('{user}','{ip_address}','{expire_date}')"""
     try:
