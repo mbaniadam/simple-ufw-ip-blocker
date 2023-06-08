@@ -3,7 +3,7 @@
 
 #### This repository contains a simple Python script that integrates with a Postgres database and firewall rules based on IP addresses and expiration dates.
 
-#### The script retrieves IP addresses and expiry dates from user input, inserts them into a Postgres database running in a Docker container, and calculates the expiry dates. If an IP address with an expired date is found, the script sends a command to the UFW firewall to block that IP.
+#### The script retrieves IP addresses and expiry dates from user input, inserts them into a Postgres database running in a Docker container, and calculates the expiration dates based on the current date. If an IP address in database with an expired date is found, the script sends a command to the UFW firewall to block that IP.
 
 #### You can schedule wg_expiration.py to run periodically (e.g., using a cron job) to automatically update firewall rules and block expired IP addresses.
 
