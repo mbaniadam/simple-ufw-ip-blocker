@@ -61,7 +61,7 @@ def removeUser():
 
 
 
-X = input("Add >>> 1 - Remove >>> 2 : ")
+X = input("Add or Update >>> 1 - Remove >>> 2 : ")
 if X == "1":
     addUpUser()
 elif X == "2":
