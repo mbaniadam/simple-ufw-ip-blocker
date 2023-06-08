@@ -33,3 +33,12 @@ docker-compose up -d
 #### Run the script:
 python3 add_user_in_db.py
 
+
+## Usage
+
+The script can be adapted for accounting purposes by associating IP addresses with accounting-related data, such as users in softwares like Wireguard etc. You can modify the script to store additional information in the database, such as account numbers, transaction types, or financial values. This allows you to leverage the script's scheduling capabilities and integrate it into your accounting processes.
+
+
+## Contributing
+
+Contributions to this project are welcome. If you find any issues or have ideas for improvements, please submit a pull request or open an issue on the GitHub repository.
