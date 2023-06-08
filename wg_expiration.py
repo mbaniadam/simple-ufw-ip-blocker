@@ -18,13 +18,17 @@ cursor = cnx.cursor()
 #selected = cursor.fetchall()
 cursor.execute(f"select username, ip_address, expire_date, created_date from users ")
 selected = cursor.fetchall()
-
+checkUfwUsers = str(os.system(f"sudo ufw status"))
 for i in selected:
-    print(i)
+    #print(i)
     userIP = i[1]
     userAge = i[2] - i[3]
-    print(userAge.days)
+    print(userIP, userAge.days)
 
     if userAge.days <= 0:
         print("user expired!")
-        #os.system(f"sudo ufw deny from {userIP}")
+        if list(map(lambda line: userIP in line, checkUfwUsers)) == False:
+            os.system(f"sudo ufw deny from {userIP}")
+    if userAge.days > 0:
+        if list(map(lambda line: userIP in line, checkUfwUsers)) == True:
+            os.system(f"sudo ufw delete deny from {userIP}")
