@@ -3,7 +3,6 @@
 ### Blocking and Unblocking IP addresses in the UFW firewall based on the valid days entered in the script.
 
 ![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/f561c711-3ce4-44a3-be1f-364a91a0b98e)
-****
 ![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/d48fd8d8-9505-4b8d-8e05-a7dc40fe25dc)
 ![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/340c23f9-704a-40c5-b119-bfc6b92413c2)
 
