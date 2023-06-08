@@ -20,7 +20,7 @@ psycopg2 module
 Docker
 
 
-![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/41bd5629-ab03-4b93-9ea6-40aebe3dfd22)
+![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/e95d2969-1ab7-41cd-920a-412c7d55a31a)
 ![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/d48fd8d8-9505-4b8d-8e05-a7dc40fe25dc)
 ![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/5cca7e62-e02f-42ae-807e-86d8d9623dfc)
 
