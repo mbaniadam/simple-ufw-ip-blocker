@@ -15,9 +15,10 @@ To run this script, you need to have the following dependencies installed:
 
 Python 3.x
 
+psycopg2 module
+
 Docker
 
-psycopg2
 
 ![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/41bd5629-ab03-4b93-9ea6-40aebe3dfd22)
 ![image](https://github.com/mbaniadam/simple-ufw-ip-blocker/assets/75830370/d48fd8d8-9505-4b8d-8e05-a7dc40fe25dc)
