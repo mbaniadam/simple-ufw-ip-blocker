@@ -1,4 +1,4 @@
-# Simple IP blocker in UFW Firewall
+# Simple IP blocker for UFW Firewall
 ## Blocking IP addresses in the UFW firewall based on the valid days entered in the script.
 
 
