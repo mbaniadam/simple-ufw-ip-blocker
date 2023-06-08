@@ -1,4 +1,5 @@
-# Simple IP blocker in UFW firewall based on expiry date
+# Simple IP blocker in UFW Firewall
+## block IP addresses in the UFW firewall based on the expiry date entered by the user
 
 
 #### This repository contains a simple Python script that integrates with a Postgres database and firewall rules based on IP addresses and expiration dates.
