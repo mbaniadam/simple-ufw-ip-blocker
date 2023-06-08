@@ -25,6 +25,6 @@ pip install psycopg2
 #### Start the Postgres database container using Docker:
 docker-compose up -d
 
-### Run the script:
+#### Run the script:
 python3 add_user_in_db.py
 
