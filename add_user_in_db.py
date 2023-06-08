@@ -19,7 +19,8 @@ while finish == 0:
     ip_address = input("Enter ip_address: ")
     expire_date = input("Format: yyyy/mm/dd\nEnter expiration date: ")
     """ insert a new user into the users table """
-    sql = f"""INSERT INTO {table_name} (username,ip_address,expire_date) VALUES ('{user}','{ip_address}','{expire_date}')"""
+    sql = f"""INSERT INTO {table_name} (username,ip_address,expire_date) VALUES ('{user}','{ip_address}','{expire_date}')
+            ON CONFLICT (ip_address) DO UPDATE SET expire_date = EXCLUDED.expire_date;"""
     try:
         cursor.execute(sql)
         #print(cursor.execute(f"INSERT IGNORE INTO {table_name} ({user}, {ip_address}, {expire_date}) VALUES (%s,%s,%s)",
