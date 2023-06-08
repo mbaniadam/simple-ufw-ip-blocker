@@ -9,6 +9,7 @@ You can schedule wg_expiration.py to run periodically (e.g., using a cron job) t
 To run this script, you need to have the following dependencies installed:
 
 Python 3.x
+
 Docker
 
 
