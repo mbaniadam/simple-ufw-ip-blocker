@@ -15,6 +15,8 @@ Python 3.x
 
 Docker
 
+psycopg2
+
 
 ## Getting Started
 Follow the steps below to get started with this script:
