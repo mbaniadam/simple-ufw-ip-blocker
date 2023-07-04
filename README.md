@@ -10,6 +10,7 @@
 
 #### You can schedule wg_expiration.py to run periodically (e.g., using a cron job) to automatically update firewall rules and block expired IP addresses.
 
+
 ### Prerequisites
 To run this script, you need to have the following dependencies installed:
 
