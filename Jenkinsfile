@@ -9,7 +9,13 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'cd postgres_docker && docker-compose up '
+        sh 'cd postgres_docker'
+      }
+    }
+
+    stage('Docker') {
+      steps {
+        sh 'docker-compose up '
       }
     }
 
