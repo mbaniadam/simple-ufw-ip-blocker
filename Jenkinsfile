@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        git 'https://github.com/mbaniadam/simple-ufw-ip-blocker'
+        git(url: 'https://github.com/mbaniadam/simple-ufw-ip-blocker', branch: 'main')
       }
     }
 
