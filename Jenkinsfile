@@ -19,15 +19,7 @@ pipeline {
 
     stage('Go to Alpine') {
       steps {
-        sh '''sudo docker container exec alpine sh
-<
-apk add docker
-&&
-apk add docker-compose
-&&
-sudo docker-compose -f postgres_docker/docker-compose.yml  up -d
-&&
-sudo docker ps
+        sh '''sudo docker container exec alpine sh < apk add docker && apk add docker-compose && sudo docker-compose -f postgres_docker/docker-compose.yml  up -d && sudo docker ps
 '''
       }
     }
