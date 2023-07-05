@@ -9,15 +9,15 @@ pipeline {
 
     stage('Run Container for Test') {
       steps {
-        sh '''sudo docker container rm -f dockertest && sudo docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock -v .:/tmp --name dockertest docker/compose:latest 
-
+        sh '''sudo docker container rm -f dockertest && sudo docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/jenkins/workspace/simple-ufw-ip-blocker_main:/tmp --name dockertest docker/compose:latest 
 '''
       }
     }
 
     stage('Test on Alpine') {
       steps {
-        sh 'sudo docker container exec dockertest apk add docker docker-compose python3 py3-pip && docker-compose -f /tmp/postgres_docker/docker-compose.yml up -d && docker ps'
+        sh '''sudo docker container exec dockertest apk add docker docker-compose python3 py3-pip && docker-compose -f /tmp/postgres_docker/docker-compose.yml up -d && docker ps
+'''
       }
     }
 
