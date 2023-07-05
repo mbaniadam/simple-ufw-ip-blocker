@@ -9,9 +9,7 @@ pipeline {
 
     stage('Run Container for Test') {
       steps {
-        sh '''sudo docker container rm -f alpine && sudo docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock --name alpine alpine && ls -a && sudo docker cp . alpine:
-
-
+        sh '''sudo docker container rm -f alpine && sudo docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock --name alpine alpine && ls -a && sudo docker cp . alpine:/tmp
 
 '''
       }
@@ -19,7 +17,7 @@ pipeline {
 
     stage('Test on Alpine') {
       steps {
-        sh 'sudo docker container exec alpine  apk add docker docker-compose && sudo docker-compose -f postgres_docker/docker-compose.yml up -d && sudo docker ps'
+        sh 'sudo docker container exec alpine  apk add docker docker-compose python3 py3-pip && sudo docker-compose -f postgres_docker/docker-compose.yml up -d && sudo docker ps'
       }
     }
 
