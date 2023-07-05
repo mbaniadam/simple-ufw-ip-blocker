@@ -19,7 +19,7 @@ pipeline {
 
     stage('Go to Alpine') {
       steps {
-        sh '''sudo docker container exec -it alpine sh
+        sh '''sudo docker container exec alpine sh
 <
 apk add docker
 &&
