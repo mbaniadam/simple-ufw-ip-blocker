@@ -7,15 +7,26 @@ pipeline {
       }
     }
 
-    stage('Build') {
+    stage('Run Container for Test') {
       steps {
-        sh 'ls -a && sudo docker-compose -f postgres_docker/docker-compose.yml  up -d'
+        sh '''sudo docker container rm -f alpine && sudo docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock --name alpine alpine && ls -a && sudo docker cp . alpine:
+
+
+
+'''
       }
     }
 
-    stage('Docker ps') {
+    stage('Go to Alpine') {
       steps {
-        sh 'sudo docker ps'
+        sh '''sudo docker container exec -it alpine sh
+'''
+      }
+    }
+
+    stage('Test') {
+      steps {
+        sh ' apk add docker && apk add docker-compose && sudo docker-compose -f postgres_docker/docker-compose.yml  up -d'
       }
     }
 
