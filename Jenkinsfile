@@ -9,7 +9,7 @@ pipeline {
 
     stage('Run Container for Test') {
       steps {
-        sh '''sudo docker container rm -f alpine && sudo docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock --name alpine alpine && ls -a && sudo docker cp . alpine:/tmp
+        sh '''sudo docker container rm -f alpine && sudo docker run -it -d --name alpine alpine && ls -a && sudo docker cp . alpine:/tmp
 
 '''
       }
