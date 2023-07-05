@@ -9,7 +9,13 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'ls -a && sudo docker-compose -f postgres_docker/docker-compose.yml  up '
+        sh 'ls -a && sudo docker-compose -f postgres_docker/docker-compose.yml  up -d'
+      }
+    }
+
+    stage('Docker ps') {
+      steps {
+        sh 'sudo docker ps'
       }
     }
 
