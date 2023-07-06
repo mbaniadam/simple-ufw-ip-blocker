@@ -16,7 +16,7 @@ pipeline {
 
     stage('Test on Alpine') {
       steps {
-        sh '''sudo docker container exec dockertest apk add docker-compose python3 py3-pip && docker-compose -f /tmp/postgres_docker/docker-compose.yml up -d && docker ps
+        sh '''sudo docker container exec dockertest apk add docker-compose python3 py3-pip && /usr/bin/docker-compose -f /tmp/postgres_docker/docker-compose.yml up -d && docker ps
 '''
       }
     }
