@@ -5,6 +5,6 @@ CREATE TABLE users (
         username VARCHAR (255) NOT NULL,
         ip_address VARCHAR (255) NOT NULL UNIQUE,
         created_date DATE NOT NULL DEFAULT CURRENT_DATE,
-		expire_date DATE NOT NULL
-
+		expire_date DATE NOT NULL,
+        valid_days INT
 );
