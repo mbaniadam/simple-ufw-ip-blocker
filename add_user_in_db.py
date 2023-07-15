@@ -22,7 +22,7 @@ def addUpUser():
         validDays = int(input("Valid days: "))
         expire_date = date.today() + timedelta(days=validDays)
         """ insert a new user into the users table """
-        sql = f"""INSERT INTO {table_name} (username,ip_address,expire_date) VALUES ('{user}','{ip_address}','{expire_date}')
+        sql = f"""INSERT INTO {table_name} (username,ip_address,expire_date,valid_days) VALUES ('{user}','{ip_address}','{expire_date}',{validDays})
                 ON CONFLICT (ip_address) DO UPDATE SET expire_date = EXCLUDED.expire_date;"""
         try:
             cursor.execute(sql)

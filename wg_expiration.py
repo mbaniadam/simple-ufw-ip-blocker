@@ -17,7 +17,7 @@ cursor = cnx.cursor()
 def main():
     #cursor.execute(f"SELECT * FROM {table_name}")
     #selected = cursor.fetchall()
-    cursor.execute(f"select username, ip_address, expire_date, created_date from users ")
+    cursor.execute(f"select username, ip_address, expire_date, created_date, valid_days from users ")
     selected = cursor.fetchall()
 
 
