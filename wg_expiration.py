@@ -20,8 +20,6 @@ def main():
     #selected = cursor.fetchall()
     cursor.execute(f"select username, ip_address, expire_date, created_date, valid_days from users ")
     selected = cursor.fetchall()
-
-
     for i in selected:
         #print(i)
         userIP = i[1]
