@@ -3,6 +3,7 @@ import datetime
 import subprocess
 import os
 
+today = datetime.date.today()
 db_name = "wgpeers"
 table_name = "users"
 db_host = "127.0.0.1"
@@ -24,7 +25,7 @@ def main():
     for i in selected:
         #print(i)
         userIP = i[1]
-        userAge = i[2] - i[3]
+        userAge = i[2] - today
         checkUfwUsers =subprocess.call(f"ufw status | grep -w {userIP}",shell=True)
         print(userIP, userAge.days)
         if userAge.days <= 0:
