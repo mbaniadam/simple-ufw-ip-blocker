@@ -9,7 +9,7 @@ pipeline {
 
     stage('Run Container for Test') {
       steps {
-        sh '''docker container rm -f dockertest && docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/jenkins/workspace/simple-ufw-ip-blocker_main:/tmp --name dockertest alpine
+        sh '''sudo docker container rm -f dockertest && sudo docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/jenkins/workspace/simple-ufw-ip-blocker_main:/tmp --name dockertest alpine
 '''
       }
     }
