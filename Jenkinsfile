@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  triggers {
-    githubPush()
-  }
   stages {
     stage('Checkout Code') {
       steps {
@@ -12,17 +9,20 @@ pipeline {
 
     stage('Run Container for Test') {
       steps {
-        sh '''docker container rm -f dockertest && docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/jenkins/workspace/simple-ufw-ip-blocker_main:/tmp --name dockertest alpine
+        sh '''sudo docker container rm -f dockertest && sudo docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/jenkins/workspace/simple-ufw-ip-blocker_main:/tmp --name dockertest alpine
 '''
       }
     }
 
     stage('Test on Alpine') {
       steps {
-        sh '''docker container exec dockertest apk add docker-compose python3 py3-pip && docker ps
+        sh '''sudo docker container exec dockertest apk add docker-compose python3 py3-pip && sudo docker ps
 '''
       }
     }
 
+  }
+  triggers {
+    githubPush()
   }
 }
