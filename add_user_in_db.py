@@ -33,11 +33,9 @@ def addUpUser():
                 finish = 0
             else:
                 cnx.commit()
-                continue
-            
+                continue         
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
-
     cnx.close()
 
 
@@ -57,10 +55,7 @@ def removeUser():
                 cnx.commit()
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
-
     cnx.close()
-
-
 
 
 X = input("Add or Update >>> 1 - Remove >>> 2 : ")
