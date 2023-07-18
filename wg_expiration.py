@@ -34,5 +34,4 @@ def main():
             if checkUfwUsers == 0:
                 os.system(f"ufw delete deny from {userIP}")
 
-
 main()
