@@ -21,7 +21,6 @@ def main():
     cursor.execute(f"select username, ip_address, expire_date, created_date, valid_days from users ")
     selected = cursor.fetchall()
     for i in selected:
-        #print(i)
         userIP = i[1]
         userAge = i[2] - today
         checkUfwUsers =subprocess.call(f"ufw status | grep -w {userIP}",shell=True)
